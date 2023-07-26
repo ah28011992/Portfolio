@@ -1,0 +1,54 @@
+/* Custom font import */
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=VT323&display=swap");
+
+
+/* RESET */
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+
+}
+:root {
+	/* Custom fonts */
+
+  --font-light: "Rajdhani", sans-serif;
+	--font-regular: "Rajdhani", sans-serif;
+	--font-medium: "Rajdhani", sans-serif;
+	--font-bold: "Rajdhani", sans-serif;
+
+/* Custom font weight */
+
+	--font-weight-light: 300;
+	--font-weight-regular: 400;
+	--font-weight-medium: 500;
+	--font-weight-semibold: 600;
+	--font-weight-bold: 700;
+
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+	font-size: 62.5%;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 1.4rem;
+}
+
+h1,
+h2 {
+	line-height: 1.1;
+	text-transform: uppercase;
+}
