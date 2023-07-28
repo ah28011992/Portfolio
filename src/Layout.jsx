@@ -1,11 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./Components/Header";
+import SideNav from "./Components/SideNav";
+
 const Layout = ({ children }) => {
+	const [isActive, setIsActive] = useState(false);
+
+	const openNav = () => {
+		setIsActive(true);
+	};
+
+	const closeNav = () => {
+		setIsActive(false);
+	};
+
 	return (
-		<div>
-			<Header />
-			{children}
-		</div>
+		<>
+			{!isActive ? (
+				<div>
+					{" "}
+					<Header openNav={openNav} />
+					{children}{" "}
+				</div>
+			) : (
+				<SideNav closeNav={closeNav} />
+			)}
+		</>
 	);
 };
 

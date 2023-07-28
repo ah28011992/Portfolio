@@ -1,16 +1,15 @@
 import React from "react";
 import Hamburger from "../assets/hamburger";
 
-const Menu = () => {
+const Menu = ({ openNav }) => {
 	return (
 		<>
-			<button className="nav__button"
+			<button
+				className='nav__button'
 				type='button'
 				aria-controls='navigation-drawer'
 				aria-expanded='false'
-				onClick={() => {
-					alert("this button has been clicked");
-				}}>
+				onClick={openNav}>
 				<Hamburger />
 			</button>
 		</>
@@ -18,6 +17,3 @@ const Menu = () => {
 };
 
 export default Menu;
-
-
-
