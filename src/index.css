@@ -106,7 +106,6 @@ nav {
 	margin: 0 auto;
 	justify-content: space-between;
 	align-items: center;
-	border: 2px solid red;
 }
 
 .nav__logo {
@@ -120,7 +119,6 @@ nav {
 	min-height: 100vh;
 	display: flex;
 	justify-content: center;
-	background-color: orange;
 	padding: 0.5em 0;
 	margin: 0;
 	z-index: -1;
@@ -135,7 +133,6 @@ nav {
 	flex-direction: column;
 	padding: 5em;
 	align-items: center;
-	border: 2px solid red;
 	width: 95%;
 	margin: 0 auto;
 }
