@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Header from "./Components/Header";
 import SideNav from "./Components/SideNav";
+import { Outlet } from "react-router-dom";
 
-const Layout = ({ children }) => {
+const Layout = () => {
 	const [isActive, setIsActive] = useState(false);
 
 	const openNav = () => {
@@ -14,17 +15,18 @@ const Layout = ({ children }) => {
 	};
 
 	return (
-		<>
+		<div className='root-layout'>
 			{!isActive ? (
 				<div>
-					{" "}
 					<Header openNav={openNav} />
-					{children}{" "}
+					<main className='main'>
+						<Outlet />
+					</main>
 				</div>
 			) : (
 				<SideNav closeNav={closeNav} />
 			)}
-		</>
+		</div>
 	);
 };
 
