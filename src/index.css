@@ -145,3 +145,22 @@ nav {
 .side-nav__item:hover {
 	color: #c62638;
 }
+
+/* Error page */
+
+.error {
+	
+	width: 100%;
+	border: 2px solid red;
+	min-height: 100vh;
+}
+
+.error-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 95%;
+	border: 2px solid blue;
+	margin: 10em auto;
+	padding: 10em 0;
+}
