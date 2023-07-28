@@ -1,35 +1,32 @@
-import React, { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 const SideNav = ({ closeNav }) => {
 	return (
-		<div className='side-nav'>
+		<div
+			className='side-nav'
+			onClick={closeNav}>
 			<ul className='side-nav__list'>
-				<a
-					onClick={closeNav}
-					href='#'
-					className='side-nav__close'>
-					&times;
-				</a>
-				<a
-					className='side-nav__item'
-					href='#'>
-					<li>Home</li>
-				</a>
-				<a
-					className='side-nav__item'
-					href='#'>
-					<li>About</li>
-				</a>
-				<a
-					className='side-nav__item'
-					href='#'>
-					<li>Projects</li>
-				</a>
-				<a
-					className='side-nav__item'
-					href='#'>
-					<li>Contact</li>
-				</a>
+				<NavLink className='side-nav__close'>&times;</NavLink>
+				<NavLink
+					to='/'
+					className='side-nav__item'>
+					Home
+				</NavLink>
+				<NavLink
+					to='/about'
+					className='side-nav__item'>
+					About
+				</NavLink>
+				<NavLink
+					to='/projects'
+					className='side-nav__item'>
+					Projects
+				</NavLink>
+				<NavLink
+					to='/contact'
+					className='side-nav__item'>
+					Contact
+				</NavLink>
 			</ul>
 		</div>
 	);
