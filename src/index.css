@@ -1,7 +1,6 @@
 /* Custom font import */
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=VT323&display=swap");
 
-
 /* RESET */
 *,
 *::before,
@@ -11,17 +10,16 @@
 
 html {
 	box-sizing: border-box;
-
 }
 :root {
 	/* Custom fonts */
 
-  --font-light: "Rajdhani", sans-serif;
+	--font-light: "Rajdhani", sans-serif;
 	--font-regular: "Rajdhani", sans-serif;
 	--font-medium: "Rajdhani", sans-serif;
 	--font-bold: "Rajdhani", sans-serif;
 
-/* Custom font weight */
+	/* Custom font weight */
 
 	--font-weight-light: 300;
 	--font-weight-regular: 400;
@@ -40,15 +38,110 @@ html {
 	-webkit-text-size-adjust: 100%;
 }
 
-
+/* Block level reset */
 body {
 	margin: 0;
 	padding: 0;
 	font-size: 1.4rem;
+	color: white;
+	background-color: #2c001e;
+}
+
+button {
+	border: none;
+	cursor: pointer;
+	background-color: transparent;
+	text-align: center;
+	transition: background 200ms ease-in-out, transform 100ms ease;
+}
+
+/* Inline level reset */
+img {
+	max-width: 100%;
 }
 
 h1,
-h2 {
+h2,
+h3 {
 	line-height: 1.1;
 	text-transform: uppercase;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:active {
+	color: white;
+}
+
+a:visited {
+	color: white;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	text-decoration: none;
+}
+
+/* Header */
+/* Header Block elements */
+
+header {
+	padding: 0.5em 0;
+	width: 100%;
+	min-height: 5em;
+}
+
+nav {
+	display: flex;
+	max-width: 95%;
+	margin: 0 auto;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav__logo {
+	height: 4em;
+	width: 4em;
+}
+
+/* Side nav */
+
+.side-nav {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	padding: 0.5em 0;
+	margin: 0;
+	z-index: -1;
+	top: 0;
+	overflow-x: hidden;
+	transition: 0.5s;
+	background-color: #2c001e;
+}
+
+.side-nav__list {
+	display: flex;
+	flex-direction: column;
+	padding: 5em;
+	align-items: center;
+	width: 95%;
+	margin: 0 auto;
+}
+
+.side-nav__item {
+	padding: 1em 0;
+	margin: 0;
+}
+
+.side-nav__item:hover {
+	color: #c62638;
 }
