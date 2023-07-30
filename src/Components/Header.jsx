@@ -1,14 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import Menu from "./Menu";
 import "../index.css";
 import LogoMenu from "./LogoMenu.jsx";
-import SideNav from "./SideNav";
 
-const Header = ({openNav}) => {
-	const [isActive, setIsActive] = useState(false);
-
-
-
+const Header = ({ openNav }) => {
 	return (
 		<>
 			<header className='header'>
@@ -21,7 +16,6 @@ const Header = ({openNav}) => {
 					</div>
 				</nav>
 			</header>
-			
 		</>
 	);
 };

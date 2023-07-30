@@ -152,7 +152,7 @@ nav {
 
 .error {
 	width: 100%;
-	min-height: 100vh;
+	/* min-height: 100vh; */
 }
 
 .error-content {
@@ -164,7 +164,7 @@ nav {
 }
 
 main {
-	/* border: 2px solid white; */
+	min-height: 400px;
 }
 
 .home {
@@ -207,4 +207,23 @@ main {
 
 .icon__list {
 	padding: 0.3em;
+}
+
+/* Footer */
+
+footer {
+	bottom: 0;
+	height: 10em;
+	width: 100%;
+	bottom: 0;
+	position: absolute;
+	display: flex;
+	align-items: flex-end;
+}
+
+.footer-svg {
+	max-width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 1em 0;
 }

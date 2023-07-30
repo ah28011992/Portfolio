@@ -10,7 +10,7 @@ const ErrorPage = () => {
 				<h1>
 					{error.status} {error.statusText}
 				</h1>
-                <p className="error__text">Something went wrong!</p>
+				<p className='error__text'>Something went wrong!</p>
 			</div>
 		</section>
 	);
