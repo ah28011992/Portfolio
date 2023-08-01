@@ -2,7 +2,7 @@ const d1 = new Date("2023-03-31"); // Back end api
 const d2 = new Date("2023-04-21"); // front end boardit
 const d3 = new Date("2023-05-10"); // Park n ride
 const d4 = new Date("2023-07-31"); // Vanilla calculator
-const d5 = new Date("2023-08-04"); // portfolio
+// const d5 = new Date("2023-08-04"); // portfolio
 const d6 = new Date("2023-08-31"); // Surf point
 
 const portfolioObject = [
@@ -12,7 +12,7 @@ const portfolioObject = [
 		description:
 			"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla laborum repellendus cupiditate consequatur ut veniam impedit quaerat eos eveniet debitis eligendi, atque magni optio totam distinctio velit fugit recusandae voluptates!",
 		techStack: ["React.js, JSX, CSS, NPM, Netlify, Elephant, Excalidraw"],
-		img: `./download.jpeg`,
+		img: `https://fakeimg.pl/250x250/cccccc/909090?text=Card+image`,
 		gitHubLink: "This is a link",
 		codePen: "Hosted Front - end information",
 		date: d1,
@@ -23,7 +23,7 @@ const portfolioObject = [
 		description:
 			"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla laborum repellendus cupiditate consequatur ut veniam impedit quaerat eos eveniet debitis eligendi, atque magni optio totam distinctio velit fugit recusandae voluptates!",
 		techStack: ["Node.js, Express.js, CORS, PostgreSQL, Jest, Renderer"],
-		img: "img url",
+		img: `https://fakeimg.pl/250x250/cccccc/909090?text=Card+image`,
 		gitHubLink: "This is a link",
 		codePen: "Hosted Back - end information",
 		date: d2,
@@ -34,6 +34,7 @@ const portfolioObject = [
 		description:
 			"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla laborum repellendus cupiditate consequatur ut veniam impedit quaerat eos eveniet debitis eligendi, atque magni optio totam distinctio velit fugit recusandae voluptates!",
 		techStack: ["React-Native", "TomTom API", "Node.js, Google Firebase"],
+		img: `https://fakeimg.pl/250x250/cccccc/909090?text=Card+image`,
 		gitHubLink: "This is a link",
 		codePen: "Hosted Back - end information",
 		date: d3,
@@ -52,12 +53,13 @@ const portfolioObject = [
 			"Node.js",
 			"Supabase",
 		],
+		img: `https://fakeimg.pl/250x250/cccccc/909090?text=Card+image`,
 		gitHubLink: "This is a link",
 		codePen: "Hosted Back - end information",
 		date: d6,
 	},
 	{
-		name: "Vanilla Calculator (with Ice Cream Emoji",
+		name: "Vanilla Calculator",
 		type: "Web App",
 		description:
 			"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla laborum repellendus cupiditate consequatur ut veniam impedit quaerat eos eveniet debitis eligendi, atque magni optio totam distinctio velit fugit recusandae voluptates!",
@@ -71,6 +73,7 @@ const portfolioObject = [
 			"Node.js",
 			"Supabase",
 		],
+		img: `https://fakeimg.pl/250x250/cccccc/909090?text=Card+image`,
 		gitHubLink: "This is a link",
 		codePen: "Hosted Back - end information",
 		date: d4,
@@ -94,8 +97,4 @@ const portfolioObject = [
 	// },
 ];
 
-const filteredProjectData = portfolioObject.map((data) => {
-	if (data.type === "Web App") {
-		console.log(data );
-	}
-});
+export default portfolioObject

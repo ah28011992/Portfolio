@@ -164,7 +164,7 @@ nav {
 }
 
 main {
-	/* min-height: 400px; */
+	min-height: 400px;
 	/* position: absolute; */
 }
 
@@ -215,8 +215,6 @@ main {
 .footer {
 	bottom: 0;
 	display: flex;
-	position: absolute;
-
 	width: 100%;
 }
 
@@ -272,7 +270,6 @@ main {
 	overflow: hidden;
 	font-family: var(--font-light);
 	font-weight: var(--font-weight-medium);
-	
 }
 
 .dropdown__item {
@@ -281,4 +278,33 @@ main {
 
 .dropdown__item:hover {
 	background-color: #c62368;
+}
+
+/* Project card */
+
+.card {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 5em;
+}
+
+.card-content {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	max-width: 20em;
+	border: 2px solid white;
+	margin: 0 auto;
+	align-items: center;
+	padding: 1em;
+	margin-top: 2em;
+	border-radius: 1.2em;
+}
+
+.card-content:hover {
+	background-color: white;
+	color: black;
+}
+.card__img {
+	border-radius: 1.2em;
 }
