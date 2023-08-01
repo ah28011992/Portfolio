@@ -164,8 +164,8 @@ nav {
 }
 
 main {
-	min-height: 400px;
-	border: 2px solid white;
+	/* min-height: 400px; */
+	/* position: absolute; */
 }
 
 .home {
@@ -212,19 +212,22 @@ main {
 
 /* Footer */
 
-footer {
-	width: 100%;
+.footer {
 	bottom: 0;
-	position: relative;
 	display: flex;
-	align-items: flex-end;
+	position: absolute;
+
+	width: 100%;
 }
 
-.footer-svg {
-	max-width: 80%;
-	margin: 0 auto;
+.footer-text {
+	display: flex;
+	/* position: absolute; */
+	justify-content: center;
+	width: 100%;
 	text-align: center;
-	padding: 1em 0;
+	/* border: 2px solid white; */
+	padding: 2em;
 }
 
 /*Filter */
@@ -269,7 +272,7 @@ footer {
 	overflow: hidden;
 	font-family: var(--font-light);
 	font-weight: var(--font-weight-medium);
-	;
+	
 }
 
 .dropdown__item {
