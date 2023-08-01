@@ -10,6 +10,7 @@ import {
 	RouterProvider,
 } from "react-router-dom";
 import ErrorPage from "./Components/ErrorPage";
+import Projects from "./routes/Projects";
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
@@ -20,6 +21,10 @@ const router = createBrowserRouter(
 			<Route
 				index
 				element={<Home />}
+			/>
+			<Route
+				path='projects'
+				element={<Projects />}
 			/>
 		</Route>
 	)

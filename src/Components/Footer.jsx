@@ -2,12 +2,12 @@ import React from "react";
 
 const Footer = () => {
 	return (
-		<div class='footer-svg'>
+		<section className='footer-text'>
 			<p>
-				<span className='home__title--highlight'>&copy;</span> Developed by
+				<span className='footer__title--highlight'>&copy;</span> Developed by
 				Aaron Hedgecock
 			</p>
-		</div>
+		</section>
 	);
 };
 
