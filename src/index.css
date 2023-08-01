@@ -256,6 +256,10 @@ footer {
 }
 
 .dropdown-content {
+	display: none;
+}
+
+.dropdown-content.show {
 	display: flex;
 	border: 0.1px solid #c62368;
 	width: 50%;
@@ -265,6 +269,7 @@ footer {
 	overflow: hidden;
 	font-family: var(--font-light);
 	font-weight: var(--font-weight-medium);
+	;
 }
 
 .dropdown__item {
