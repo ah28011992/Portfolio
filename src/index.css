@@ -165,6 +165,7 @@ nav {
 
 main {
 	min-height: 400px;
+	border: 2px solid white;
 }
 
 .home {
@@ -212,11 +213,9 @@ main {
 /* Footer */
 
 footer {
-	bottom: 0;
-	height: 10em;
 	width: 100%;
 	bottom: 0;
-	position: absolute;
+	position: relative;
 	display: flex;
 	align-items: flex-end;
 }
@@ -226,4 +225,52 @@ footer {
 	margin: 0 auto;
 	text-align: center;
 	padding: 1em 0;
+}
+
+/*Filter */
+.filter {
+	display: flex;
+	max-width: 80%;
+	margin: 0 auto;
+	padding: 0.5em 0;
+}
+
+.filter__btn {
+	border: 1px solid green;
+	margin-right: 1em;
+	margin-top: 0.5em;
+	color: white;
+	padding: 0.8em 1.2em;
+	border-radius: 1.2em;
+	border-color: #c62368;
+	font-family: var(--font-light);
+	font-weight: var(--font-weight-medium);
+}
+
+.filter__btn:hover {
+	background-color: #c62368;
+}
+
+.dropdown {
+	display: inline;
+}
+
+.dropdown-content {
+	display: flex;
+	border: 0.1px solid #c62368;
+	width: 50%;
+	flex-direction: column;
+	border-radius: 1.2em;
+	margin-top: 0.5em;
+	overflow: hidden;
+	font-family: var(--font-light);
+	font-weight: var(--font-weight-medium);
+}
+
+.dropdown__item {
+	padding: 0.8rem 0.5em;
+}
+
+.dropdown__item:hover {
+	background-color: #c62368;
 }
