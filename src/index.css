@@ -44,6 +44,7 @@ body {
 	font-size: 1.4rem;
 	color: white;
 	background-color: #2c001e;
+	font-family: var(--font-light);
 }
 
 button {
@@ -301,6 +302,12 @@ main {
 	border-radius: 1.2em;
 }
 
+.card__name {
+	text-align: center;
+	font-size: 2rem;
+	font-weight: var(--font-weight-semibold);
+}
+
 .card-content:hover {
 	color: #c62368;
 }
@@ -317,4 +324,9 @@ main {
 	border-radius: 1.2em;
 	margin-right: 0.5em;
 	margin-top: 0.5em;
+}
+
+.icons-card {
+	padding: 0;
+	margin: 0;
 }
