@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "../Components/Title";
 import Filter from "../Components/Filter";
+import ProjectCard from "../Components/ProjectCard";
 const Projects = () => {
 	return (
 		<>
@@ -15,6 +16,8 @@ const Projects = () => {
 			<section className='filter'>
 				<Filter />
 			</section>
+
+			<ProjectCard />
 		</>
 	);
 };
