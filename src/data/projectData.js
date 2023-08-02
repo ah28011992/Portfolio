@@ -5,13 +5,50 @@ const d4 = new Date("2023-07-31"); // Vanilla calculator
 // const d5 = new Date("2023-08-04"); // portfolio
 const d6 = new Date("2023-08-31"); // Surf point
 
+const colorMapping = {
+	"React.js": "blue",
+	JSX: "purple",
+	CSS: "lightblue",
+	NPM: "green",
+	Netlify: "orange",
+	Elephant: "gray",
+	Excalidraw: "pink",
+	"Node.js": "green",
+	"Express.js": "blue",
+	PostgreSQL: "lightblue",
+	Jest: "red",
+	Renderer: "greenyellow",
+	"React-Native": "purple",
+	"TomTom API": "orange",
+	"Google Firebase": "darkorange",
+	"Next.JS": "blue",
+	"TailWind CSS": "teal",
+	Framer: "pink",
+	"Three.js": "purple",
+	Supabase: "blue",
+	"Vanilla JS": "goldenrod",
+	Typescript: "blue",
+	"CSS : BEM": "lightblue",
+	WebPack: "purple",
+	"Mongo DB": "green",
+	Mongoose: "yellow",
+};
+
 const portfolioObject = [
 	{
 		name: "BOARDIT",
 		type: "Web App",
 		description:
 			"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla laborum repellendus cupiditate consequatur ut veniam impedit quaerat eos eveniet debitis eligendi, atque magni optio totam distinctio velit fugit recusandae voluptates!",
-		techStack: ["React.js, JSX, CSS, NPM, Netlify, Elephant, Excalidraw"],
+		techStack: [
+			"React.js|React.js",
+			"JSX|JSX",
+			"CSS|CSS",
+			"NPM|NPM",
+			"Netlify|Netfliy",
+			"Elephant|Elephant",
+			"Excalidraw|Excalidraw",
+		],
 		img: `https://fakeimg.pl/250x250/cccccc/909090?text=Card+image`,
 		gitHubLink: "This is a link",
 		codePen: "Hosted Front - end information",
@@ -22,18 +59,29 @@ const portfolioObject = [
 		type: "API",
 		description:
 			"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla laborum repellendus cupiditate consequatur ut veniam impedit quaerat eos eveniet debitis eligendi, atque magni optio totam distinctio velit fugit recusandae voluptates!",
-		techStack: ["Node.js, Express.js, CORS, PostgreSQL, Jest, Renderer"],
+		techStack: [
+			"Node.js|Node.js",
+			"Express.js|Express.js",
+			"PostgreSQL|PostgreSQL",
+			"Jest|Jest",
+			"Renderer|Renderer",
+		],
 		img: `https://fakeimg.pl/250x250/cccccc/909090?text=Card+image`,
 		gitHubLink: "This is a link",
 		codePen: "Hosted Back - end information",
 		date: d2,
 	},
 	{
-		name: "Park 'n' Find",
+		name: "Park, Find 'n' Remind",
 		type: "Mobile App",
 		description:
 			"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla laborum repellendus cupiditate consequatur ut veniam impedit quaerat eos eveniet debitis eligendi, atque magni optio totam distinctio velit fugit recusandae voluptates!",
-		techStack: ["React-Native", "TomTom API", "Node.js, Google Firebase"],
+		techStack: [
+			"React-Native|React-Native",
+			"TomTom API|TomTom API",
+			"Node.js|Node.js",
+			"Google Firebase|Google Firebase",
+		],
 		img: `https://fakeimg.pl/250x250/cccccc/909090?text=Card+image`,
 		gitHubLink: "This is a link",
 		codePen: "Hosted Back - end information",
@@ -46,12 +94,12 @@ const portfolioObject = [
 			"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla laborum repellendus cupiditate consequatur ut veniam impedit quaerat eos eveniet debitis eligendi, atque magni optio totam distinctio velit fugit recusandae voluptates!",
 		techStack: [
 			// Include security and Weather API
-			"Next.JS",
-			"TailWind CSS",
-			"Framer",
-			"Three.js",
-			"Node.js",
-			"Supabase",
+			"Next.JS|Next.JS",
+			"TailWind CSS|TailWind CSS",
+			"Framer|Framer",
+			"Three.js|Three.js",
+			"Node.js|Node.js",
+			"Supabase|Supabase",
 		],
 		img: `https://fakeimg.pl/250x250/cccccc/909090?text=Card+image`,
 		gitHubLink: "This is a link",
@@ -65,13 +113,12 @@ const portfolioObject = [
 			"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla laborum repellendus cupiditate consequatur ut veniam impedit quaerat eos eveniet debitis eligendi, atque magni optio totam distinctio velit fugit recusandae voluptates!",
 		techStack: [
 			// Include security and API
-			"Vanilla JS",
-			"Typescript",
-			"CSS : BEM",
-			"WebPack",
-			"",
-			"Node.js",
-			"Supabase",
+			"Vanilla JS|Vanilla JS",
+			"Typescript|Typescript",
+			"CSS : BEM|CSS : BEM",
+			"WebPack|WebPack",
+			"Node.js|Node.js",
+			"PostgreSQL|PostgreSQL",
 		],
 		img: `https://fakeimg.pl/250x250/cccccc/909090?text=Card+image`,
 		gitHubLink: "This is a link",
@@ -97,4 +144,4 @@ const portfolioObject = [
 	// },
 ];
 
-export default portfolioObject
+export { portfolioObject, colorMapping };

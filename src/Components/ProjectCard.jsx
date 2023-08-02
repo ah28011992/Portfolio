@@ -1,8 +1,7 @@
 import React from "react";
-import portfolioObject from "../data/projectData.js";
+import { portfolioObject, colorMapping } from "../data/projectData.js";
 
 const ProjectCard = () => {
-	console.log(portfolioObject);
 	return (
 		<section className='card'>
 			{portfolioObject.map((item, index) => (
@@ -10,7 +9,8 @@ const ProjectCard = () => {
 					className='card-content'
 					key={index}>
 					<div className='card__item'>
-						<img className="card__img"
+						<img
+							className='card__img'
 							src={item.img}
 							alt='project'
 						/>
@@ -20,6 +20,24 @@ const ProjectCard = () => {
 					</div>
 					<div className='card__item'>
 						<p>{item.description}</p>
+					</div>
+					<div className='card__item'>
+						{item.techStack.map((stackItem, index) => {
+							const [technology, colorKey] = stackItem.split("|");
+
+							const backgroundColor = colorMapping[colorKey] || "lightgrey";
+
+							return (
+								<div
+									key={index}
+									className='card__stack'
+									style={{ backgroundColor }}>
+									<ul>
+										<li>{technology}</li>
+									</ul>
+								</div>
+							);
+						})}
 					</div>
 				</div>
 			))}
