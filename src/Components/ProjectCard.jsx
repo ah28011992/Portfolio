@@ -2,26 +2,27 @@ import React from "react";
 import { portfolioObject, colorMapping } from "../data/projectData.js";
 import IconGitgub from "./icons/IconGitHub.jsx";
 import IconWeb from "./icons/IconWeb.jsx";
-const ProjectCard = () => {
+const ProjectCard = ({ portfolioOrder }) => {
+	
 	return (
 		<section className='card'>
-			{portfolioObject.map((item, index) => (
+			{portfolioOrder.map((project, index) => (
 				<div
 					className='card-content'
 					key={index}>
 					<div className='card__item'>
 						<img
 							className='card__img'
-							src={item.img}
+							src={project.img}
 							alt='project'
 						/>
 					</div>
 					<div className='card__item'>
-						<p className='card__name'>{item.name}</p>
+						<p className='card__name'>{project.name}</p>
 						<div className='icons icons-card'>
 							<div className='icon__list icon__list--card'>
 								<a
-									href={item.hostedWebLink}
+									href={project.hostedWebLink}
 									target='_blank'
 									rel='noopener noreferrer'>
 									<button>
@@ -31,7 +32,7 @@ const ProjectCard = () => {
 							</div>
 							<div className='icon__list icon__list--card'>
 								<a
-									href={item.gitHubLink}
+									href={project.gitHubLink}
 									target='_blank'
 									rel='noopener noreferrer'>
 									<button>
@@ -42,10 +43,10 @@ const ProjectCard = () => {
 						</div>
 					</div>
 					<div className='card__item'>
-						<p>{item.description}</p>
+						<p>{project.description}</p>
 					</div>
 					<div className='card__item'>
-						{item.techStack.map((stackItem, index) => {
+						{project.techStack.map((stackItem, index) => {
 							const [technology, colorKey] = stackItem.split("|");
 
 							const backgroundColor = colorMapping[colorKey] || "lightgrey";

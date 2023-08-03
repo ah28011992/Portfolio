@@ -151,4 +151,3 @@ const portfolioObject = [
 ];
 
 export { portfolioObject, colorMapping };
-
