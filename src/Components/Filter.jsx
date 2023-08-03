@@ -1,25 +1,32 @@
 import React, { useState, useEffect } from "react";
 
-const Filter = ({ portfolioOrder, setPortfolioOrder, setSelelctedType }) => {
+const Filter = ({ portfolioOrder, setPortfolioOrder, setSelectedType }) => {
 	const [showContent, setShowContent] = useState(false);
-	const [newestDate, setNewestDate] = useState("oldest");
-
+	const [date, setDate] = useState("oldest");
+	// Date sorting newest / oldest
 	useEffect(() => {
-		if (newestDate === "newest") {
+		if (date === "newest") {
 			const sortedNewest = [...portfolioOrder].sort((a, b) => b.date - a.date);
 			setPortfolioOrder(sortedNewest);
-		} else if (newestDate === "oldest") {
+		} else if (date === "oldest") {
 			const sortedOldest = [...portfolioOrder].sort((a, b) => a.date - b.date);
 			setPortfolioOrder(sortedOldest);
 		}
-	}, [newestDate]);
+		if (date === "All") {
+			setSelectedType(null);
+			setDate("oldest");
+			setPortfolioOrder(portfolioOrder);
+		}
+	}, [date]);
+
+	// DropDown menu sorting
 
 	const handleDropDownClick = () => {
 		setShowContent(!showContent);
 	};
 
 	const handleSelect = (type) => {
-		setSelelctedType(type);
+		setSelectedType(type);
 		setShowContent(false);
 	};
 
@@ -31,18 +38,18 @@ const Filter = ({ portfolioOrder, setPortfolioOrder, setSelelctedType }) => {
 	return (
 		<section className='fitler-buttons'>
 			<button
-				onClick={() => setNewestDate("all")}
+				onClick={() => setDate("All")}
 				className='filter__btn'>
 				All
 			</button>
 			<button
-				onClick={() => setNewestDate("newest")}
+				onClick={() => setDate("newest")}
 				className='filter__btn'>
 				Newest
 			</button>
 			<button
 				className='filter__btn'
-				onClick={() => setNewestDate("oldest")}>
+				onClick={() => setDate("oldest")}>
 				Oldest
 			</button>
 			<div className='dropdown'>

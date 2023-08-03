@@ -6,7 +6,7 @@ import { portfolioObject } from "../data/projectData";
 
 const Projects = () => {
 	const [portfolioOrder, setPortfolioOrder] = useState(portfolioObject);
-	const [selectedType, setSelelctedType] = useState(null);
+	const [selectedType, setSelectedType] = useState(null);
 
 	const dropDownFilter = selectedType
 		? portfolioOrder.filter((content) => content.type === selectedType)
@@ -26,11 +26,14 @@ const Projects = () => {
 				<Filter
 					portfolioOrder={portfolioOrder}
 					setPortfolioOrder={setPortfolioOrder}
-					setSelelctedType={setSelelctedType}
+					setSelectedType={setSelectedType}
 				/>
 			</section>
 
-			<ProjectCard portfolioOrder={portfolioOrder} dropDownFilter={dropDownFilter} />
+			<ProjectCard
+				portfolioOrder={portfolioOrder}
+				dropDownFilter={dropDownFilter}
+			/>
 		</>
 	);
 };
