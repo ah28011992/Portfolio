@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Title from "../Components/Title";
 import Filter from "../Components/Filter";
 import ProjectCard from "../Components/ProjectCard";
+import { portfolioObject } from "../data/projectData";
+
 const Projects = () => {
+	const [portfolioOrder, setPortfolioOrder] = useState(portfolioObject);
+	const [selectedType, setSelectedType] = useState(null);
+
+	const dropDownFilter = selectedType
+		? portfolioOrder.filter((content) => content.type === selectedType)
+		: portfolioOrder;
+
 	return (
 		<>
 			<section className='home'>
@@ -14,10 +23,17 @@ const Projects = () => {
 				</p>
 			</section>
 			<section className='filter'>
-				<Filter />
+				<Filter
+					portfolioOrder={portfolioOrder}
+					setPortfolioOrder={setPortfolioOrder}
+					setSelectedType={setSelectedType}
+				/>
 			</section>
 
-			<ProjectCard />
+			<ProjectCard
+				portfolioOrder={portfolioOrder}
+				dropDownFilter={dropDownFilter}
+			/>
 		</>
 	);
 };
