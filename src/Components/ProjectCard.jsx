@@ -1,12 +1,11 @@
 import React from "react";
-import { portfolioObject, colorMapping } from "../data/projectData.js";
+import { colorMapping } from "../data/projectData.js";
 import IconGitgub from "./icons/IconGitHub.jsx";
 import IconWeb from "./icons/IconWeb.jsx";
-const ProjectCard = ({ portfolioOrder }) => {
-	
+const ProjectCard = ({ portfolioOrder, dropDownFilter }) => {
 	return (
 		<section className='card'>
-			{portfolioOrder.map((project, index) => (
+			{dropDownFilter.map((project, index) => (
 				<div
 					className='card-content'
 					key={index}>

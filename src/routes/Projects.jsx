@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import Title from "../Components/Title";
 import Filter from "../Components/Filter";
 import ProjectCard from "../Components/ProjectCard";
@@ -6,7 +6,11 @@ import { portfolioObject } from "../data/projectData";
 
 const Projects = () => {
 	const [portfolioOrder, setPortfolioOrder] = useState(portfolioObject);
-	
+	const [selectedType, setSelelctedType] = useState(null);
+
+	const dropDownFilter = selectedType
+		? portfolioOrder.filter((content) => content.type === selectedType)
+		: portfolioOrder;
 
 	return (
 		<>
@@ -22,10 +26,11 @@ const Projects = () => {
 				<Filter
 					portfolioOrder={portfolioOrder}
 					setPortfolioOrder={setPortfolioOrder}
+					setSelelctedType={setSelelctedType}
 				/>
 			</section>
 
-			<ProjectCard portfolioOrder={portfolioOrder}/>
+			<ProjectCard portfolioOrder={portfolioOrder} dropDownFilter={dropDownFilter} />
 		</>
 	);
 };
