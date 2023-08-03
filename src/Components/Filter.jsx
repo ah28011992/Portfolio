@@ -3,7 +3,9 @@ import React, { useState, useEffect } from "react";
 const Filter = ({ portfolioOrder, setPortfolioOrder, setSelectedType }) => {
 	const [showContent, setShowContent] = useState(false);
 	const [date, setDate] = useState("oldest");
+
 	// Date sorting newest / oldest
+
 	useEffect(() => {
 		if (date === "newest") {
 			const sortedNewest = [...portfolioOrder].sort((a, b) => b.date - a.date);
@@ -12,7 +14,7 @@ const Filter = ({ portfolioOrder, setPortfolioOrder, setSelectedType }) => {
 			const sortedOldest = [...portfolioOrder].sort((a, b) => a.date - b.date);
 			setPortfolioOrder(sortedOldest);
 		}
-		if (date === "All") {
+		if (date === "all") {
 			setSelectedType(null);
 			setDate("oldest");
 			setPortfolioOrder(portfolioOrder);
@@ -38,7 +40,7 @@ const Filter = ({ portfolioOrder, setPortfolioOrder, setSelectedType }) => {
 	return (
 		<section className='fitler-buttons'>
 			<button
-				onClick={() => setDate("All")}
+				onClick={() => setDate("all")}
 				className='filter__btn'>
 				All
 			</button>
