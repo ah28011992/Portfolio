@@ -2,7 +2,7 @@ import React from "react";
 import { colorMapping } from "../data/projectData.js";
 import IconGitgub from "./icons/IconGitHub.jsx";
 import IconWeb from "./icons/IconWeb.jsx";
-const ProjectCard = ({ portfolioOrder, dropDownFilter }) => {
+const ProjectCard = ({  dropDownFilter }) => {
 	return (
 		<section className='card'>
 			{dropDownFilter.map((project, index) => (
