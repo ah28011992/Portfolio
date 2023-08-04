@@ -175,6 +175,8 @@ main {
 	align-items: center;
 	text-align: center;
 	padding: 3em 0;
+	padding-bottom: 0;
+	margin-bottom: 0;
 	margin: 0 auto;
 	width: 30em;
 	max-width: 80%;
@@ -286,7 +288,7 @@ main {
 .card {
 	display: flex;
 	flex-wrap: wrap;
-	margin-bottom: 5em;
+	margin-bottom: 2em;
 }
 
 .card-content {
@@ -329,4 +331,23 @@ main {
 .icons-card {
 	padding: 0;
 	margin: 0;
+}
+
+/* Call to action */
+
+.cta {
+	display: flex;
+	flex-direction: column;
+	max-width: 80%;
+	margin: 0 auto;
+	align-items: center;
+	padding: 1em 0;
+}
+
+.cta__btn {
+	background-color: #c62368;
+	padding: 0.8em 2em;
+	margin-top: 1em;
+	color: white;
+	font-family: ;
 }

@@ -3,6 +3,7 @@ import Title from "../Components/Title";
 import Filter from "../Components/Filter";
 import ProjectCard from "../Components/ProjectCard";
 import { portfolioObject } from "../data/projectData";
+import CallToAction from "../Components/CallToAction";
 
 const Projects = () => {
 	const [portfolioOrder, setPortfolioOrder] = useState(portfolioObject);
@@ -34,6 +35,7 @@ const Projects = () => {
 				portfolioOrder={portfolioOrder}
 				dropDownFilter={dropDownFilter}
 			/>
+			<CallToAction />
 		</>
 	);
 };
