@@ -23,7 +23,7 @@ const formData = {
 
 const Contact = () => {
 	const [formInputs, setFormInputs] = useState(formData);
-	const [isValidEmail, setIsValidEmail] = useState(true);
+	const [isValidEmail, setIsValidEmail] = useState(false);
 	const [formError, setFormError] = useState(false);
 	const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -45,12 +45,6 @@ const Contact = () => {
 			} else {
 				setFormError(null);
 			}
-		} else if (name === "first_name" || name === "last_name") {
-			if (value.length < 2 || value.length > 50) {
-				setFormError("Please enter a valid name (2-50 characters).");
-			} else {
-				setFormError(null);
-			}
 		}
 	};
 
@@ -65,9 +59,18 @@ const Contact = () => {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		await postForm();
-		setFormInputs(formData);
-		setIsSubmitted(true);
+
+		try {
+			await postForm();
+			setFormInputs(formData);
+			setIsSubmitted(true);
+			setFormError(true);
+			setIsValidEmail(true);
+		} catch (error) {
+			setIsSubmitted(false);
+			console.error("Error submitting form:", error);
+			setFormError("Failed to submit the form. Please try again later.");
+		}
 	};
 
 	return (
@@ -101,7 +104,13 @@ const Contact = () => {
 							autoComplete='off'
 							required
 						/>
-
+						{!formInputs.first_name ||
+						formInputs.first_name.length < 2 ||
+						formInputs.first_name.length > 50 ? (
+							<p className='form_error'>
+								Please enter a valid name (2-50 characters).
+							</p>
+						) : null}
 						<label htmlFor='last_name'>Last name</label>
 						<input
 							type='text'
@@ -119,7 +128,13 @@ const Contact = () => {
 							}
 							autoComplete='off'
 							required></input>
-
+						{!formInputs.last_name ||
+						formInputs.last_name.length < 2 ||
+						formInputs.last_name.length > 50 ? (
+							<p className='form_error'>
+								Please enter a valid name (2-50 characters).
+							</p>
+						) : null}
 						<label htmlFor='email_address'>Email</label>
 						<input
 							type='text'
@@ -159,9 +174,11 @@ const Contact = () => {
 							Submit
 						</button>
 					</div>
-					{formError && <p className='form_error'>{formError}</p>}
-					{isSubmitted && (
-						<p className='form_submitted'>For submitted Successfully</p>
+
+					{isSubmitted ? (
+						<p className='form_submitted'>Form submitted Successfully</p>
+					) : (
+						formError && <p className='form_error'>{formError}</p>
 					)}
 				</form>
 			</section>
