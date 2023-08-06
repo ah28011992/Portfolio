@@ -64,7 +64,7 @@ const Contact = () => {
 			await postForm();
 			setFormInputs(formData);
 			setIsSubmitted(true);
-			setFormError(true);
+			setFormError(null);
 			setIsValidEmail(true);
 		} catch (error) {
 			setIsSubmitted(false);
