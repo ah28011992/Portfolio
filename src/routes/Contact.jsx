@@ -1,10 +1,31 @@
 import React, { useState } from "react";
 import Title from "../Components/Title";
+import firebaseConfig from "../firebase-config";
+import { collection, addDoc } from "firebase/firestore";
+const db = firebaseConfig.db;
+
+const time = Date.now();
+const dateData = new Intl.DateTimeFormat("en-UK", {
+	year: "numeric",
+	month: "long",
+	day: "2-digit",
+	hour: "2-digit",
+	minute: "2-digit",
+}).format(time);
+
+const formData = {
+	first_name: "",
+	last_name: "",
+	email: "",
+	message: "",
+	time: dateData,
+};
 
 const Contact = () => {
-	const [inputs, setInputs] = useState({});
+	const [formInputs, setFormInputs] = useState(formData);
 	const [isValidEmail, setIsValidEmail] = useState(true);
-	const [formError, setFormError] = useState(null);
+	const [formError, setFormError] = useState(false);
+	const [isSubmitted, setIsSubmitted] = useState(false);
 
 	const validateEmail = (email) => {
 		const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -14,8 +35,7 @@ const Contact = () => {
 	const handleChange = (e) => {
 		const name = e.target.name;
 		const value = e.target.value;
-
-		setInputs((values) => ({ ...values, [name]: value }));
+		setFormInputs((values) => ({ ...values, [name]: value }));
 
 		if (name === "email") {
 			const isValid = validateEmail(value);
@@ -34,8 +54,20 @@ const Contact = () => {
 		}
 	};
 
-	const handleSubmit = (e) => {
+	const postForm = async () => {
+		try {
+			const formSubmissionsRef = collection(db, "formSubmissions");
+			await addDoc(formSubmissionsRef, formInputs);
+		} catch (error) {
+			console.error("Error adding document:", error);
+		}
+	};
+
+	const handleSubmit = async (e) => {
 		e.preventDefault();
+		await postForm();
+		setFormInputs(formData);
+		setIsSubmitted(true);
 	};
 
 	return (
@@ -55,13 +87,14 @@ const Contact = () => {
 						<input
 							type='text'
 							name='first_name'
+							value={formInputs.first_name}
 							placeholder='First Name'
 							id='first_name'
 							onChange={handleChange}
 							className={
-								inputs.first_name &&
-								inputs.first_name.length >= 2 &&
-								inputs.first_name.length <= 50
+								formInputs.first_name &&
+								formInputs.first_name.length >= 2 &&
+								formInputs.first_name.length <= 50
 									? "valid-input"
 									: "invalid"
 							}
@@ -73,13 +106,14 @@ const Contact = () => {
 						<input
 							type='text'
 							name='last_name'
+							value={formInputs.last_name}
 							placeholder='Last Name'
 							id='last_name'
 							onChange={handleChange}
 							className={
-								inputs.last_name &&
-								inputs.last_name.length >= 2 &&
-								inputs.last_name.length <= 50
+								formInputs.last_name &&
+								formInputs.last_name.length >= 2 &&
+								formInputs.last_name.length <= 50
 									? "valid-input"
 									: "invalid"
 							}
@@ -90,6 +124,7 @@ const Contact = () => {
 						<input
 							type='text'
 							name='email'
+							value={formInputs.email}
 							id='email_address'
 							className={!isValidEmail ? "invalid" : "valid-input"}
 							placeholder='example@hello.co.uk'
@@ -104,13 +139,14 @@ const Contact = () => {
 						<textarea
 							placeholder='Start typing...'
 							id='message'
+							value={formInputs.message}
 							name='message'
 							autoComplete='off'
 							onChange={handleChange}
 							className={
-								inputs.message &&
-								inputs.message.length >= 2 &&
-								inputs.message.length <= 150
+								formInputs.message &&
+								formInputs.message.length >= 2 &&
+								formInputs.message.length <= 150
 									? "valid-input"
 									: "invalid"
 							}
@@ -119,16 +155,14 @@ const Contact = () => {
 						<button
 							className='submit'
 							type='submit'
-							// className={styles.button__send}
-							// disabled={!isValidEmail}>
-						>
+							disabled={!isValidEmail}>
 							Submit
 						</button>
 					</div>
-					{/* {formError && <p className='form_error'>{formError}</p>}
+					{formError && <p className='form_error'>{formError}</p>}
 					{isSubmitted && (
 						<p className='form_submitted'>For submitted Successfully</p>
-					)} */}
+					)}
 				</form>
 			</section>
 		</section>
