@@ -48,28 +48,19 @@ const Contact = () => {
 		}
 	};
 
-	const postForm = async () => {
-		try {
-			const formSubmissionsRef = collection(db, "formSubmissions");
-			await addDoc(formSubmissionsRef, formInputs);
-		} catch (error) {
-			console.error("Error adding document:", error);
-		}
-	};
-
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-
 		try {
-			await postForm();
-			setFormInputs(formData);
+			const formSubmissionsRef = await addDoc(
+				collection(db, "formSubmissions"),
+				{
+					...formInputs,
+				}
+			);
 			setIsSubmitted(true);
-			setFormError(null);
-			setIsValidEmail(true);
+			setFormInputs(formData);
 		} catch (error) {
-			setIsSubmitted(false);
-			console.error("Error submitting form:", error);
-			setFormError("Failed to submit the form. Please try again later.");
+			console.log("error message", error);
 		}
 	};
 
@@ -175,7 +166,7 @@ const Contact = () => {
 						</button>
 					</div>
 
-					{isSubmitted ? (
+					{!!isSubmitted ? (
 						<p className='form_submitted'>Form submitted Successfully</p>
 					) : (
 						formError && <p className='form_error'>{formError}</p>
