@@ -462,3 +462,16 @@ input[type="button"]:hover {
 :placeholder-shown {
 	font-family: var(--font-light);
 }
+
+/* about page */
+
+.profile-picture {
+	width: 100%;
+}
+
+.profile-picture__img {
+	width: 50%;
+	border-radius: 50%;
+	
+	
+}
