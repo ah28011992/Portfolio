@@ -57,6 +57,7 @@ const Contact = () => {
 					...formInputs,
 				}
 			);
+			console.log("submitted");
 			setIsSubmitted(true);
 			setFormInputs(formData);
 		} catch (error) {
