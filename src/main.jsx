@@ -3,16 +3,17 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import Layout from "./Layout.jsx";
 import Home from "./routes/Home";
-
+import ErrorPage from "./Components/ErrorPage";
+import Projects from "./routes/Projects";
+import Contact from "./routes/Contact";
+import About from "./routes/About";
 import {
 	createBrowserRouter,
 	createRoutesFromElements,
 	Route,
 	RouterProvider,
 } from "react-router-dom";
-import ErrorPage from "./Components/ErrorPage";
-import Projects from "./routes/Projects";
-import Contact from "./routes/Contact";
+
 const router = createBrowserRouter(
 	createRoutesFromElements(
 		<Route
@@ -22,6 +23,10 @@ const router = createBrowserRouter(
 			<Route
 				index
 				element={<Home />}
+			/>
+			<Route
+				path='about'
+				element={<About />}
 			/>
 			<Route
 				path='projects'
