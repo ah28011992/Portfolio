@@ -492,7 +492,7 @@ input[type="button"]:hover {
 .about-navigation__btn:hover {
 	background-color: #c62368;
 }
-
+/* About me section */
 .aboutMe-container {
 	border: 2px solid;
 	width: 95%;
@@ -504,9 +504,6 @@ input[type="button"]:hover {
 	margin: 0 auto;
 	text-align: justify;
 	word-spacing: -0.2rem;
-	
 }
 
-.section-one__text {
-	
-}
+
