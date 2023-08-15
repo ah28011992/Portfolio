@@ -506,4 +506,18 @@ input[type="button"]:hover {
 	word-spacing: -0.2rem;
 }
 
+.tech-stack {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	max-width: 85%;
+	margin: 0 auto;
+	margin-top: 2em;
+}
 
+.tech-stack__text {
+	margin-top: 1em;
+	text-align: center;
+	padding-top: 2em 0;
+	font-weight: var(--font-weight-semibold);
+}
