@@ -37,14 +37,16 @@ const About = () => {
 	};
 
 	return (
-		<section className='home'>
-			<Title />
-			<p className='home__text'>Hello, I'm Aaron :)</p>
-			<picture className='profile-picture'>
-				<img
-					className='profile-picture__img'
-					src={profilePicture}></img>
-			</picture>
+		<>
+			<section className='home'>
+				<Title />
+				<p className='home__text'>Hello, I'm Aaron :)</p>
+				<picture className='profile-picture'>
+					<img
+						className='profile-picture__img'
+						src={profilePicture}></img>
+				</picture>
+			</section>
 			<section className='about-navigation'>
 				{contentObj.map((content) => (
 					<button
@@ -56,8 +58,8 @@ const About = () => {
 					</button>
 				))}
 			</section>
-			{showContent && activeComponent}
-		</section>
+			{showContent ? activeComponent : <AboutMe />}{" "}
+		</>
 	);
 };
 

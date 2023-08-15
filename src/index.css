@@ -475,19 +475,38 @@ input[type="button"]:hover {
 }
 
 .about-navigation {
-	display: flex;
+	width: 95%;
+	margin: 0 auto;
 	margin-top: 2em;
 	flex-wrap: wrap;
-	justify-content: space-evenly;
-	width: 100%;
+	display: flex;
+	justify-content: center;
 }
 .about-navigation__btn {
 	border: 0.1px solid;
 	padding: 0.5em 1em;
-	margin: 0.5em 0;
+	margin: 0.5em 0.5em;
 	color: white;
 	border-radius: 0.5em;
 }
 .about-navigation__btn:hover {
 	background-color: #c62368;
+}
+
+.aboutMe-container {
+	border: 2px solid;
+	width: 95%;
+	margin: 0 auto;
+}
+
+.section-one {
+	max-width: 85%;
+	margin: 0 auto;
+	text-align: justify;
+	word-spacing: -0.2rem;
+	
+}
+
+.section-one__text {
+	
 }
