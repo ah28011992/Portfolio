@@ -521,3 +521,22 @@ input[type="button"]:hover {
 	padding-top: 2em 0;
 	font-weight: var(--font-weight-semibold);
 }
+
+.cv-card-container {
+	display: flex;
+	flex-direction: column;
+	max-width: 85%;
+	margin: 0 auto;
+}
+
+.cv-card {
+	border: 2px solid red;
+	width: 85%;
+	margin: 0 auto;
+	margin-top: 2em;
+}
+.bullet-list {
+	list-style: inside;
+	padding: 0.2em;
+	margin-left: 1em;
+}

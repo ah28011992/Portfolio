@@ -1,7 +1,12 @@
 import React from "react";
+import CvCard from "./CvCard";
 
 const Education = () => {
-	return <div>Education</div>;
+	return (
+		<section className='education-container'>
+			<CvCard />
+		</section>
+	);
 };
 
 export default Education;
