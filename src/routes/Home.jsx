@@ -18,10 +18,14 @@ const Home = () => {
 			</p>
 			<div className='icons'>
 				<div className='icon__list'>
-					<IconGithub />{" "}
+					<a href='https://github.com/ah28011992'>
+						<IconGithub />
+					</a>
 				</div>
 				<div className='icon__list'>
-					<IconLinkedin />{" "}
+					<a href='https://www.linkedin.com/in/aaron-h-97756011a/'>
+						<IconLinkedin />
+					</a>
 				</div>
 			</div>
 		</section>
