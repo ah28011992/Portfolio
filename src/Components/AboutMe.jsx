@@ -27,6 +27,7 @@ const AboutMe = () => {
 					</div>
 					<div className='col'>
 						<img
+							loading='lazy'
 							src={image}
 							alt='scarborough south bay sunset'></img>
 					</div>
