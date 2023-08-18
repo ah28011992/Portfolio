@@ -596,4 +596,23 @@ input[type="button"]:hover {
 		height: 6em;
 		width: 6em;
 	}
+	/* about */
+
+	.section-one {
+		padding-top: 1em;
+	}
+	.row {
+		display: flex;
+	}
+	.col {
+		width: 100%;
+	}
+
+	.col + .col {
+		margin-left: 2em;
+		padding-top: 1em;
+	}
+	.cv-card {
+		width: 80%;
+	}
 }
