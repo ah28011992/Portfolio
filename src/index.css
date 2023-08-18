@@ -522,6 +522,12 @@ input[type="button"]:hover {
 	font-weight: var(--font-weight-semibold);
 }
 
+.tech-stack__content {
+	width: 10em;
+	margin: 2em;
+	
+}
+
 .cv-card-container {
 	display: flex;
 	flex-direction: column;
@@ -535,7 +541,7 @@ input[type="button"]:hover {
 	margin-top: 2em;
 	border: 0.5px solid white;
 	border-radius: 1.2rem;
-	padding: 0.5rem 1.5rem 2rem 1.5rem ;
+	padding: 0.5rem 1.5rem 2rem 1.5rem;
 }
 .bullet-list {
 	list-style: inside;
