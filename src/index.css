@@ -615,4 +615,18 @@ input[type="button"]:hover {
 	.cv-card {
 		width: 80%;
 	}
+	.filter {
+		margin: 0 auto;
+		max-width: 80%;
+	}
+	.card {
+		max-width: 80%;
+		margin: 0 auto;
+	}
+	.card-content {
+		width: 30%;
+	}
+	.cta {
+		padding-top: 2em;
+	}
 }
