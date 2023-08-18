@@ -620,12 +620,10 @@ input[type="button"]:hover {
 		max-width: 80%;
 	}
 	.card {
-		max-width: 80%;
+		/* max-width: 50%; */
 		margin: 0 auto;
 	}
-	.card-content {
-		width: 30%;
-	}
+
 	.cta {
 		padding-top: 2em;
 	}
