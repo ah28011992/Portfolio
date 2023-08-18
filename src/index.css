@@ -32,9 +32,6 @@ html {
 	font-size: 62.5%;
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
-	/* -webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-text-size-adjust: 100%; */
 }
 
 /* Block level reset */
@@ -92,6 +89,11 @@ ul {
 
 li {
 	text-decoration: none;
+}
+
+.root-layout {
+	position: relative;
+	min-height: 100vh;
 }
 
 /* Header */
@@ -153,7 +155,6 @@ nav {
 
 .error {
 	width: 100%;
-	/* min-height: 100vh; */
 }
 
 .error-content {
@@ -165,8 +166,7 @@ nav {
 }
 
 main {
-	min-height: 400px;
-	/* position: absolute; */
+	padding-bottom: 10em;
 }
 
 .home {
@@ -219,16 +219,21 @@ main {
 	bottom: 0;
 	display: flex;
 	width: 100%;
+	position: absolute;
+	justify-content: center;
+	height: 6em;
 }
 
 .footer-text {
 	display: flex;
-	/* position: absolute; */
-	justify-content: center;
 	width: 100%;
 	text-align: center;
-	/* border: 2px solid white; */
-	padding: 2em;
+	justify-content: flex-end;
+	width: 60%;
+	align-items: center;
+	margin: 0 auto;
+	flex-direction: column;
+	padding: 1.5em 0;
 }
 
 /*Filter */
@@ -394,7 +399,6 @@ input:focus {
 label {
 	line-height: 2;
 	text-align: left;
-
 	margin-bottom: 1em;
 	margin-top: 1.5em;
 	color: white;
@@ -525,7 +529,6 @@ input[type="button"]:hover {
 .tech-stack__content {
 	width: 10em;
 	margin: 2em;
-	
 }
 
 .cv-card-container {
