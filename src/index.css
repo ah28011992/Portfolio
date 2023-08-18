@@ -587,7 +587,10 @@ input[type="button"]:hover {
 		padding: 0;
 	}
 	.home__quote {
-		width: 70%;
+		width: 85%;
+	}
+	.home__title {
+		padding-top: 2em;
 	}
 	.nav__logo {
 		height: 6em;
