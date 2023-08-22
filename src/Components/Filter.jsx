@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const Filter = ({ portfolioOrder, setPortfolioOrder, setSelectedType }) => {
 	const [showContent, setShowContent] = useState(false);
-	const [date, setDate] = useState("oldest");
+	const [date, setDate] = useState("newest");
 
 	// Date sorting newest / oldest
 
