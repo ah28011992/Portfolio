@@ -4,6 +4,8 @@ const d3 = new Date("2023-05-10"); // Park n ride
 const d4 = new Date("2023-07-31"); // Vanilla calculator
 const d5 = new Date("2023-08-22"); // portfolio
 const d6 = new Date("2023-08-31"); // Surf point
+import porfolioImg from "../assets/card-img/portfolio.png";
+import pfrImg from "../assets/card-img/pfr.png";
 
 const colorMapping = {
 	"React.js": "blue",
@@ -63,6 +65,7 @@ const portfolioObject = [
 	},
 	{
 		name: "BOARDIT API",
+		status: "In progress...",
 		type: "API",
 		description:
 			"The BOARDIT API works alongside the BOARDIT React app and was created through integration testing. This project showcases my grasp of web protocols, integration testing, and querying a structured database using the MVC pattern. I also had the chance to work with PostgreSQL and Supertest",
@@ -95,15 +98,16 @@ const portfolioObject = [
 			"Git|Git",
 			"GitHub|GitHub",
 		],
-		img: `https://fakeimg.pl/250x250/cccccc/909090?text=Card+image`,
-		gitHubLink: "This is a link",
-		hostedWebLink: "#",
+		img: pfrImg,
+		gitHubLink: "https://github.com/differently-wired/park-finder",
+		hostedWebLink: "https://github.com/differently-wired/park-finder",
 		codePen: "Hosted Back - end information",
 		date: d3,
 	},
 	{
 		name: "Surf point",
 		type: "Web App",
+		status: "Coming soon...",
 		description:
 			"Surf Point is a full stack mobile app project that showcases my skills in mobile app development using TypeScript and live API data integration. This app allows users to check real-time surf forecasts, receive pollution notifications, view comments/reviews on surf spots, and even post their own comments. ",
 		techStack: [
@@ -119,14 +123,15 @@ const portfolioObject = [
 			"GitHub|GitHub",
 		],
 		img: `https://fakeimg.pl/250x250/cccccc/909090?text=Card+image`,
-		gitHubLink: "This is a link",
-		hostedWebLink: "#",
+		gitHubLink: "disabled",
+		hostedWebLink: "disabled",
 		codePen: "Hosted Back - end information",
 		date: d6,
 	},
 	{
 		name: "Vanilla Calculator",
 		type: "Web App",
+		status: "In progress...",
 		description:
 			"I built a practical calculator using vanilla JS and styled it with Tailwind CSS. The main goal was to strengthen my DOM manipulation skills and get more comfortable with Tailwind, a popular CSS framework. This project allowed me to create a working calculator while enhancing my ability to combine functionality with styling",
 		techStack: [
@@ -157,7 +162,7 @@ const portfolioObject = [
 			"Google Firebase|Google Firebase",
 			"Three.js|Three.js",
 		],
-		img: `https://fakeimg.pl/250x250/cccccc/909090?text=Card+image`,
+		img: porfolioImg,
 		gitHubLink: "https://github.com/ah28011992/portfolio",
 		hostedWebLink: "https://aaron-hedgecock.netlify.app/",
 		codePen: "Hosted Front - end information",
