@@ -10,19 +10,19 @@ const AboutMe = () => {
 						<p className='section-one__text'>
 							{" "}
 							I'm an innovative junior developer based in the UK with a passion
-							for solving real world problems.{" "}
+							for solving real world problems{" "}
 						</p>
 						<p className='section-one__text'>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam
-							velit, convallis vitae aliquam a, efficitur ac sapien. Phasellus
-							sollicitudin eu nulla vitae volutpat. Integer pellentesque posuere
-							tellus sit amet lobortis.{" "}
+							In 2022, I took a bold step by switching careers from managing my
+							own healthcare business to retraining as a junior software
+							developer. Why? Well, my analytical and curious mindset finally
+							aligned with my creative side. Now, I'm able to bring both aspects
+							of my thinking together to create meaningful solutions{" "}
 						</p>
 						<p className='section-one__text'>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam
-							velit, convallis vitae aliquam a, efficitur ac sapien. Phasellus
-							sollicitudin eu nulla vitae volutpat. Integer pellentesque posuere
-							tellus sit amet lobortis.{" "}
+							In my spare time you'll find me catching the sunset or sunrise
+							surf, cooking up a storm in the kitchen or procrastinting over my
+							next venture{" "}
 						</p>
 					</div>
 					<div className='col'>

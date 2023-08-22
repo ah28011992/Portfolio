@@ -18,9 +18,9 @@ const Projects = () => {
 			<section className='home'>
 				<Title />
 				<p className='home__text'>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porta
-					hendrerit leo, nec convallis sem efficitur a. Pellentesque accumsan
-					velit sit amet tellus aliquet, non.
+					Feel free to check out my latest projects or filter through the ones
+					that catch your eye. I'm constantly working on enhancing and updating
+					my projects to showcase my evolving skillset
 				</p>
 			</section>
 			<section className='filter'>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Title from "../Components/Title";
 import profilePicture from "../assets/profile-image.jpeg";
 import AboutMe from "../Components/AboutMe";
-import Education from "../Components/Education";
+import Education from "../Components/Experience";
 import TechStack from "../Components/TechStack";
 
 const contentObj = [
@@ -11,7 +11,7 @@ const contentObj = [
 		component: <AboutMe />,
 	},
 	{
-		name: "Education",
+		name: "Experience",
 		component: <Education />,
 	},
 	{
