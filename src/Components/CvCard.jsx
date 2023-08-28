@@ -1,6 +1,6 @@
 import React from "react";
 import { experienceObj } from "../data/experienceData";
-import cv from "../assets/Aaron Hedgecock - Junior Software Developer.pdf";
+import cv from "../assets/Aaron Hedgecock - Junior Applications Developer.pdf";
 const CvCard = () => {
 	return (
 		<>
